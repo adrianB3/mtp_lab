@@ -1,0 +1,42 @@
+﻿@model lab5_webapp.Models.Imprumut
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Imprumut</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Carte.Titlu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Carte.Titlu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Client.Nume)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Client.Nume)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataImprumut)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataImprumut)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ImprumutId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

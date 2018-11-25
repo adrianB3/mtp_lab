@@ -1,0 +1,82 @@
+﻿@model lab5_webapp.Models.Client
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Client</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nume)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nume)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CNP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CNP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Adresa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adresa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telefon)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ClientId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+<h3>Imprumuturi</h3>
+<table class="table">
+    <tr>
+        <th>
+            Data
+        </th>
+        <th>
+            Autor
+        </th>
+        <th>
+           Titlu
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.Imprumuturi)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataImprumut)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Carte.Autor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Carte.Titlu)
+            </td>
+        </tr>
+    }
+
+</table>

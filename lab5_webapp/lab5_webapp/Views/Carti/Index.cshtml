@@ -1,0 +1,51 @@
+﻿@model IEnumerable<lab5_webapp.Models.Carte>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Titlu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Autor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Editura)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AnAparitie)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Titlu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Autor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Editura)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AnAparitie)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CarteId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CarteId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CarteId })
+        </td>
+    </tr>
+}
+
+</table>

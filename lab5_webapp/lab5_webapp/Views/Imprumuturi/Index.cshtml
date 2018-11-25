@@ -1,0 +1,45 @@
+﻿@model IEnumerable<lab5_webapp.Models.Imprumut>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Carte.Titlu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Client.Nume)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataImprumut)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Carte.Titlu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Client.Nume)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataImprumut)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ImprumutId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ImprumutId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ImprumutId })
+        </td>
+    </tr>
+}
+
+</table>
