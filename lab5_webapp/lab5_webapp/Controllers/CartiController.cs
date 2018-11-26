@@ -27,8 +27,7 @@ namespace lab5_webapp.Controllers
                 {
                     carti = carti.Where(c => c.AnAparitie >= an11 && c.AnAparitie <= an22);
                 }
-            }
-            
+            }           
             return View(carti);
         }
 

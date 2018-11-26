@@ -30,6 +30,14 @@ namespace lab5_webapp.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Imprumut imprumut = await db.Imprumuturi.FindAsync(id);
+            if(imprumut.DataImprumut.AddDays(7) < DateTime.Today)
+            {
+                imprumut.IsDue = true;
+            }
+            else
+            {
+                imprumut.IsDue = false;
+            }
             if (imprumut == null)
             {
                 return HttpNotFound();

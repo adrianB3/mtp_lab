@@ -13,6 +13,7 @@ namespace lab5_webapp.Models
         public int CarteId { get; set; }
         [Display(Name = "Data Imprumut"), DataType(DataType.Date)]
         public DateTime DataImprumut { get; set; }
+        public bool IsDue { get; set; }
 
         public virtual Client Client { get; set; }
         public virtual Carte Carte { get; set; }

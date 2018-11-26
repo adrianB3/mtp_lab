@@ -55,10 +55,30 @@ namespace lab5_webapp.Controllers
             DateTime dateOfBirth = new DateTime(yearOfBirth, monthOfBirth, dayOfBirth);
             var age = today.Year - dateOfBirth.Year;
             if (dateOfBirth > today.AddYears(-age)) age--;
-            string dateOfBirthStr = dateOfBirth.ToString("dd-MMMM-yyyy");          
+            string dateOfBirthStr = dateOfBirth.ToString("dd-MMMM-yyyy");
+            
+            float[] penalties = new float[client.Imprumuturi.Count];
+            int count = 0;
+            foreach (var impr in client.Imprumuturi)
+            {
+                if (impr.DataImprumut.AddDays(7) < DateTime.Today)
+                {
+                    impr.IsDue = true;
+                }
+                else
+                {
+                    impr.IsDue = false;
+                }
+                if (impr.IsDue)
+                {
+                    penalties[count] = ((today - impr.DataImprumut).Days * 2);
+                }
+                count++;
+            }
+
             ViewBag.dateOfBirth = dateOfBirthStr;
             ViewBag.age = age.ToString();
-
+            ViewBag.penalties = penalties;
             return View(client);
         }
 

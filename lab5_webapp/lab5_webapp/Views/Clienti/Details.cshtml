@@ -4,6 +4,8 @@
     ViewBag.Title = "Details";
     var dateOfBirth = ViewBag.dateOfBirth;
     var age = ViewBag.age;
+    int cont = 0;
+    float[] penalties = ViewBag.penalties;
 }
 
 <h2>Details</h2>
@@ -76,17 +78,25 @@
 
     @foreach (var item in Model.Imprumuturi)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.DataImprumut)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Carte.Autor)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Carte.Titlu)
-            </td>
-        </tr>
+        
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataImprumut)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Carte.Autor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Carte.Titlu)
+        </td>
+        <td>
+            Is Due: 
+            @Html.DisplayFor(modelItem => item.IsDue)
+            Penalties: 
+            @penalties[cont] lei.
+        </td>
+    </tr>
+        cont++;
     }
 
 </table>
