@@ -39,10 +39,26 @@ namespace lab5_webapp.Controllers
                 return HttpNotFound();
             }
             var today = DateTime.Today;
-           
-            // todo
-            
-           
+            int yearOfBirth = 1990;
+            if(client.CNP[0].Equals('1') || client.CNP[0].Equals('2'))
+            {
+                yearOfBirth = int.Parse(client.CNP.Substring(1, 2)) + 1900;
+            }
+
+            if (client.CNP[0].Equals('5') || client.CNP[0].Equals('6'))
+            {
+                yearOfBirth = int.Parse(client.CNP.Substring(1, 2)) + 2000;
+            }
+
+            int monthOfBirth = int.Parse(client.CNP.Substring(3, 2));
+            int dayOfBirth = int.Parse(client.CNP.Substring(5, 2));
+            DateTime dateOfBirth = new DateTime(yearOfBirth, monthOfBirth, dayOfBirth);
+            var age = today.Year - dateOfBirth.Year;
+            if (dateOfBirth > today.AddYears(-age)) age--;
+            string dateOfBirthStr = dateOfBirth.ToString("dd-MMMM-yyyy");          
+            ViewBag.dateOfBirth = dateOfBirthStr;
+            ViewBag.age = age.ToString();
+
             return View(client);
         }
 
