@@ -10,15 +10,15 @@
     @Html.ActionLink("Create New", "Create")
     @using (Html.BeginForm())
     {
-    <form>
-        <div class="form-group">
-            <label for="exampleInputEmail1">Nume</label>
-            @Html.TextBox("nume", null, new { @class = "form-control" })
-        </div>
-        <button type="submit" class="btn btn-primary" value="Cauta">Cauta</button>
-    </form>
+        <form>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Nume</label>
+                @Html.TextBox("nume", null, new { @class = "form-control" })
+            </div>
+            <button type="submit" class="btn btn-primary" value="Cauta">Cauta</button>
+        </form>
     }
-    </p>
+    
     <table class="table">
         <tr>
             <th>

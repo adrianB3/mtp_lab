@@ -9,6 +9,22 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+<h5>Filtru dupa an aparitie</h5>
+@using (Html.BeginForm())
+{
+<form>
+    <div class="form-group">
+        <label for="filter">An1</label>
+        @Html.TextBox("an1", null, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label for="filter1">An2</label>
+        @Html.TextBox("an2", null, new { @class = "form-control" })
+    </div>
+    <button type="submit" class="btn btn-primary" value="Cauta">Cauta</button>
+    <button type="reset" class="btn btn-warning" value="Reset">Reset</button>
+</form>
+}
 <table class="table">
     <tr>
         <th>
@@ -26,26 +42,27 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Titlu)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Autor)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Editura)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AnAparitie)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.CarteId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.CarteId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.CarteId })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Titlu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Autor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Editura)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnAparitie)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.CarteId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.CarteId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.CarteId })
+            </td>
+        </tr>
+    }
 
 </table>

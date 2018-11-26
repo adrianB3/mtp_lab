@@ -16,9 +16,20 @@ namespace lab5_webapp.Controllers
         private BibliotecaContext db = new BibliotecaContext();
 
         // GET: Carti
-        public async Task<ActionResult> Index()
+        public async Task<ActionResult> Index(string an1, string an2)
         {
-            return View(await db.Carti.ToListAsync());
+            var carti = from c in db.Carti select c;
+            if(!String.IsNullOrEmpty(an1) && !String.IsNullOrEmpty(an2))
+            {
+                int an11 = int.Parse(an1);
+                int an22 = int.Parse(an2);
+                if (an11 <= an22)
+                {
+                    carti = carti.Where(c => c.AnAparitie >= an11 && c.AnAparitie <= an22);
+                }
+            }
+            
+            return View(carti);
         }
 
         // GET: Carti/Details/5
