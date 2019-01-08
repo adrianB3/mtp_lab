@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "magazin_electrocasnice", "magazin_electrocasnice\magazin_electrocasnice.csproj", "{D016DF06-7258-4C30-8770-AEBD746097B7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "evidenta_autovehicule", "evidenta_autovehicule\evidenta_autovehicule.csproj", "{9D892B74-9F55-4514-AB0E-393AB70CDF45}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "evidenta_autovehicule2", "evidenta_autovehicule2\evidenta_autovehicule2.csproj", "{A9AF0E7C-9F30-4F2E-B8C2-C0D7E5CDBDA3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{D016DF06-7258-4C30-8770-AEBD746097B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D016DF06-7258-4C30-8770-AEBD746097B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D016DF06-7258-4C30-8770-AEBD746097B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D892B74-9F55-4514-AB0E-393AB70CDF45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D892B74-9F55-4514-AB0E-393AB70CDF45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D892B74-9F55-4514-AB0E-393AB70CDF45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D892B74-9F55-4514-AB0E-393AB70CDF45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9AF0E7C-9F30-4F2E-B8C2-C0D7E5CDBDA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9AF0E7C-9F30-4F2E-B8C2-C0D7E5CDBDA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9AF0E7C-9F30-4F2E-B8C2-C0D7E5CDBDA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9AF0E7C-9F30-4F2E-B8C2-C0D7E5CDBDA3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
