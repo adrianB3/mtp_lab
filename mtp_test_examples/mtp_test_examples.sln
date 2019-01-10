@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "evidenta_autovehicule", "ev
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "evidenta_autovehicule2", "evidenta_autovehicule2\evidenta_autovehicule2.csproj", "{A9AF0E7C-9F30-4F2E-B8C2-C0D7E5CDBDA3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ex_3_fisiere", "ex_3_fisiere\ex_3_fisiere.csproj", "{3720BEE1-3527-4302-86FD-183C0BEB0627}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{A9AF0E7C-9F30-4F2E-B8C2-C0D7E5CDBDA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9AF0E7C-9F30-4F2E-B8C2-C0D7E5CDBDA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9AF0E7C-9F30-4F2E-B8C2-C0D7E5CDBDA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3720BEE1-3527-4302-86FD-183C0BEB0627}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3720BEE1-3527-4302-86FD-183C0BEB0627}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3720BEE1-3527-4302-86FD-183C0BEB0627}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3720BEE1-3527-4302-86FD-183C0BEB0627}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
