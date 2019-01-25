@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "game_text_char_guess", "game_text_char_guess\game_text_char_guess.csproj", "{5C011D62-EE80-4F62-AB23-2AF468FA156B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "treasure_hunter", "treasure_hunter\treasure_hunter.csproj", "{EF844DC1-79DD-4357-91CA-13DBA9EFC0D3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{5C011D62-EE80-4F62-AB23-2AF468FA156B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C011D62-EE80-4F62-AB23-2AF468FA156B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C011D62-EE80-4F62-AB23-2AF468FA156B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF844DC1-79DD-4357-91CA-13DBA9EFC0D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF844DC1-79DD-4357-91CA-13DBA9EFC0D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF844DC1-79DD-4357-91CA-13DBA9EFC0D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF844DC1-79DD-4357-91CA-13DBA9EFC0D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
